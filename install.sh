@@ -13,7 +13,7 @@ dnf update -y
 mkdir ~/.config
 chown $(whoami): ~/.config
 mv ./dotconfig/* ~/.config
-mv ./bg.jpg ~/.config
+mv ./nord-wind.jpg ~/.config
 
 # Installing Essential Programs 
 dnf install sddm bspwm sxhkd kitty rofi polybar picom thunar nitrogen lxpolkit
