@@ -19,6 +19,9 @@ mv ./nord-wind.jpg ~/.config
 dnf install sddm bspwm sxhkd kitty rofi polybar picom thunar nitrogen lxpolkit
 # Installing Other less important Programs
 dnf install mangohud gimp vim lxappearance
+# Install neovim
+dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+dnf install -y neovim python3-neovim
 # Installing Custom ocs-url package
 dnf install ./rpm-packages/ocs-url-3.1.0-1.fc20.x86_64.rpm
 
