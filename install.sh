@@ -21,16 +21,18 @@ dnf install sddm bspwm sxhkd kitty rofi polybar picom thunar nitrogen lxpolkit
 # Installing Other less important Programs
 dnf install mangohud gimp vim lxappearance neofetch lnav
 
+# Install zsh
+sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+
 # Install neovim 0.8
-wget https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-chmod u+x nvim.appimage
-./nvim.appimage
+wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
+tar xzvf nvim-linux64.tar.gz
+echo 'alias nvim="~/nvim-linux64/bin/nvim"' >> ~/.zshrc
 
 # adding btop
 wget https://github.com/aristocratos/btop/releases/download/v1.2.8/btop-x86_64-linux-musl.tbz
-
-# Install zsh
-sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+tar xzvf btop-x86_64-linux-musl.tbz
+./btop-x86_64-linux-musl/install.sh
 
 # Install starship
 curl -sS https://starship.rs/install.sh | sh
