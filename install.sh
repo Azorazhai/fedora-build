@@ -19,7 +19,7 @@ mv ./nord-wind.jpg ~/.config
 dnf install sddm bspwm sxhkd kitty rofi polybar picom thunar nitrogen lxpolkit
 
 # Installing Other less important Programs
-dnf install gimp vim lxappearance neofetch lnav
+dnf install gimp lxappearance neofetch lnav
 
 # Install zsh
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
@@ -51,6 +51,20 @@ unzip Meslo.zip -d /usr/share/fonts
 fc-cache -vf
 # Removing zip Files
 rm ./FiraCode.zip ./Meslo.zip
+
+# More programs and dependencies 
+sudo dnf install -y papirus-icon-theme arandr firefox pavucontrol pulseaduio pipewire inkscape tumbler dnfdragora dnfdragora-gui
+
+# Install Brave 
+dnf install -y dnf-plugins-core
+dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
+rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+dnf install -y brave-browser
+
+# Install Chrome
+dnf install -y fedora-workstation-repositories
+dnf config-manager --set-enabled google-chrome
+dnf install -y google-chrome-stable
 
 # Enabling Services and Graphical User Interface
 systemctl enable sddm
