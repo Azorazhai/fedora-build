@@ -19,7 +19,7 @@ mv ./nord-wind.jpg ~/.config
 dnf install sddm bspwm sxhkd kitty rofi polybar picom thunar nitrogen lxpolkit
 
 # Installing Other less important Programs
-dnf install mangohud gimp vim lxappearance neofetch lnav
+dnf install gimp vim lxappearance neofetch lnav
 
 # Install zsh
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
