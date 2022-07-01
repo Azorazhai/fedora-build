@@ -1,0 +1,10 @@
+[character]
+success_symbol = "[➜](bold green) "
+error_symbol = "[✗](bold red) "
+
+[time]
+format = '[\[$time\]]($style) '
+disabled = false
+
+[golang]
+format = 'via [($version )]($style)'
