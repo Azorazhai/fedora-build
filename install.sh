@@ -24,11 +24,6 @@ sudo dnf install -y sddm sddm-breeze bspwm sxhkd kitty rofi polybar picom thunar
 # Installing Other less important Programs
 sudo dnf install -y gimp vim lxappearance neofetch lnav wget curl zsh dconf-editor
 
-# adding btop
-wget https://github.com/aristocratos/btop/releases/download/v1.2.8/btop-x86_64-linux-musl.tbz
-tar xjvf btop-x86_64-linux-musl.tbz 
-sudo ./install.sh
-
 # Install starship
 curl -sS https://starship.rs/install.sh | sh
 
@@ -64,6 +59,13 @@ sudo dnf install -y google-chrome-stable
 # Enabling Services and Graphical User Interface
 sudo systemctl enable sddm
 sudo systemctl set-default graphical.target
+
+# adding btop
+wget https://github.com/aristocratos/btop/releases/download/v1.2.8/btop-x86_64-linux-musl.tbz
+mkdir btop
+tar xjvf btop-x86_64-linux-musl.tbz -C btop
+sudo btop/install.sh
+
 
 # Install zsh
 sudo sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
