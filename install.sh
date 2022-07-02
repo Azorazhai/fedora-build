@@ -16,10 +16,10 @@ mv ./dotconfig/* ~/.config
 mv ./nord-wind.jpg ~/.config
 
 # Installing Essential Programs 
-dnf install sddm bspwm sxhkd kitty rofi polybar picom thunar nitrogen lxpolkit
+dnf install -y sddm bspwm sxhkd kitty rofi polybar picom thunar nitrogen lxpolkit
 
 # Installing Other less important Programs
-dnf install gimp lxappearance neofetch lnav
+dnf install -y gimp lxappearance neofetch lnav wget curl
 
 # Install zsh
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
