@@ -16,7 +16,7 @@ mv ./dotconfig/* ~/.config
 mv ./nord-wind.jpg ~/.config
 
 # Installing Essential Programs 
-dnf install -y sddm bspwm sxhkd kitty rofi polybar picom thunar nitrogen lxpolkit
+dnf install -y sddm sddm-breeze bspwm sxhkd kitty rofi polybar picom thunar nitrogen lxpolkit
 
 # Installing Other less important Programs
 dnf install -y gimp lxappearance neofetch lnav wget curl
