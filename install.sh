@@ -19,7 +19,7 @@ mv ./nord-wind.jpg ~/.config
 sudo dnf install -y sddm sddm-breeze bspwm sxhkd kitty rofi polybar picom thunar nitrogen lxpolkit
 
 # Installing Other less important Programs
-sudo dnf install -y gimp lxappearance neofetch lnav wget curl zsh
+sudo dnf install -y gimp vim lxappearance neofetch lnav wget curl zsh
 
 # adding btop
 wget https://github.com/aristocratos/btop/releases/download/v1.2.8/btop-x86_64-linux-musl.tbz
