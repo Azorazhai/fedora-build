@@ -65,17 +65,12 @@ bspc rule -a Chromium desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
-bspc rule -a Discord desktop='^6'
-bspc rule -a synergy desktop='^9'
 
 #Auto-Start
 urxvtc &
 lxpolkit &
 picom --config "$HOME/.config/bspwm/picom.conf" &
-nitrogen --set-auto "$HOME/.config/bg.jpg" &
-#/usr/bin/synergys -f -d ERROR -n studio-pc -c /etc/synergy.conf -a 192.168.69.10:24800 --log ~/.local/log/synergy.log &
-/bin/Discord --start-minimized &
-synology-drive &
+nitrogen --set-auto "$HOME/.config/nord-wind.jpg" &
 
 # Move to Desktop 1
 bspc desktop -f 1
