@@ -21,14 +21,6 @@ dnf install -y sddm sddm-breeze bspwm sxhkd kitty rofi polybar picom thunar nitr
 # Installing Other less important Programs
 dnf install -y gimp lxappearance neofetch lnav wget curl zsh
 
-# Install zsh
-sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-
-# Install neovim 0.8
-wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
-tar xzvf nvim-linux64.tar.gz
-echo 'alias nvim="~/nvim-linux64/bin/nvim"' >> ~/.zshrc
-
 # adding btop
 wget https://github.com/aristocratos/btop/releases/download/v1.2.8/btop-x86_64-linux-musl.tbz
 tar xjvf btop-x86_64-linux-musl.tbz 
@@ -36,7 +28,6 @@ tar xjvf btop-x86_64-linux-musl.tbz
 
 # Install starship
 curl -sS https://starship.rs/install.sh | sh
-echo 'eval "$(starship init zsh)"' >> ~/.zshrc
 
 # Installing Custom ocs-url package
 dnf install ./rpm-packages/ocs-url-3.1.0-1.fc20.x86_64.rpm
@@ -69,3 +60,12 @@ dnf install -y google-chrome-stable
 # Enabling Services and Graphical User Interface
 systemctl enable sddm
 systemctl set-default graphical.target
+
+# Install zsh
+sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+
+# Install neovim 0.8
+wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
+tar xzvf nvim-linux64.tar.gz
+echo 'alias nvim="~/nvim-linux64/bin/nvim"' >> ~/.zshrc
+echo 'eval "$(starship init zsh)"' >> ~/.zshrc
