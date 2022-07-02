@@ -44,7 +44,7 @@ fc-cache -vf
 rm ./FiraCode.zip ./Meslo.zip
 
 # More programs and dependencies 
-sudo dnf install -y papirus-icon-theme arandr firefox pavucontrol pulseaduio pipewire inkscape tumbler dnfdragora dnfdragora-gui
+sudo dnf install -y papirus-icon-theme arandr firefox pavucontrol pipewire inkscape tumbler dnfdragora dnfdragora-gui
 
 # Install Brave 
 dnf install -y dnf-plugins-core
