@@ -19,7 +19,7 @@ mv ./nord-wind.jpg ~/.config
 dnf install -y sddm sddm-breeze bspwm sxhkd kitty rofi polybar picom thunar nitrogen lxpolkit
 
 # Installing Other less important Programs
-dnf install -y gimp lxappearance neofetch lnav wget curl
+dnf install -y gimp lxappearance neofetch lnav wget curl zsh
 
 # Install zsh
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
@@ -31,8 +31,8 @@ echo 'alias nvim="~/nvim-linux64/bin/nvim"' >> ~/.zshrc
 
 # adding btop
 wget https://github.com/aristocratos/btop/releases/download/v1.2.8/btop-x86_64-linux-musl.tbz
-tar xzvf btop-x86_64-linux-musl.tbz
-~/btop-x86_64-linux-musl/install.sh
+tar xjvf btop-x86_64-linux-musl.tbz 
+./install.sh
 
 # Install starship
 curl -sS https://starship.rs/install.sh | sh
