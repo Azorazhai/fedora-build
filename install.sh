@@ -70,6 +70,10 @@ sudo btop/install.sh
 wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
 tar xzvf nvim-linux64.tar.gz -C ~/
 
+# more programs
+sudo dnf install -y python3-pip python3-wheel xsel
+sudo pip3 install pynim
+
 # Install zsh
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
