@@ -36,7 +36,7 @@ tar xzvf btop-x86_64-linux-musl.tbz
 
 # Install starship
 curl -sS https://starship.rs/install.sh | sh
-echo 'eval "$(starship init zsh)"' >> ~./zshrc
+echo 'eval "$(starship init zsh)"' >> ~/.zshrc
 
 # Installing Custom ocs-url package
 dnf install ./rpm-packages/ocs-url-3.1.0-1.fc20.x86_64.rpm
