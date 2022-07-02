@@ -32,7 +32,7 @@ echo 'alias nvim="~/nvim-linux64/bin/nvim"' >> ~/.zshrc
 # adding btop
 wget https://github.com/aristocratos/btop/releases/download/v1.2.8/btop-x86_64-linux-musl.tbz
 tar xzvf btop-x86_64-linux-musl.tbz
-./btop-x86_64-linux-musl/install.sh
+~/btop-x86_64-linux-musl/install.sh
 
 # Install starship
 curl -sS https://starship.rs/install.sh | sh
