@@ -14,6 +14,9 @@ mkdir ~/.config
 chown $(whoami): ~/.config
 mv ./dotconfig/* ~/.config
 mv ./nord-wind.jpg ~/.config
+mv .xinitrc ~/
+mv .X* ~/
+
 
 # Installing Essential Programs 
 sudo dnf install -y sddm sddm-breeze bspwm sxhkd kitty rofi polybar picom thunar nitrogen lxpolkit
