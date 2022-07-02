@@ -66,12 +66,12 @@ mkdir btop
 tar xjvf btop-x86_64-linux-musl.tbz -C btop
 sudo btop/install.sh
 
-
-# Install zsh
-sudo sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-
 # Install neovim 0.8
 wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
-tar xzvf nvim-linux64.tar.gz
+tar xzvf nvim-linux64.tar.gz -C ~/
+
+# Install zsh
+sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+
 echo 'alias nvim="~/nvim-linux64/bin/nvim"' >> ~/.zshrc
 echo 'eval "$(starship init zsh)"' >> ~/.zshrc
