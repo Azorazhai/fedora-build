@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Check if Script is Run as Root
-if [[ $EUID -ne 0 ]]; then
-  echo "You must be a root user to run this script, please run sudo ./install.sh" 2>&1
-  exit 1
-fi
+#if [[ $EUID -ne 0 ]]; then
+#  echo "You must be a root user to run this script, please run sudo ./install.sh" 2>&1
+#  exit 1
+#fi
 
 # Updating System
-dnf update -y
+sudo dnf update -y
 
 # Making .config and Moving dotfiles and Background to .config
 mkdir ~/.config
@@ -16,30 +16,30 @@ mv ./dotconfig/* ~/.config
 mv ./nord-wind.jpg ~/.config
 
 # Installing Essential Programs 
-dnf install -y sddm sddm-breeze bspwm sxhkd kitty rofi polybar picom thunar nitrogen lxpolkit
+sudo dnf install -y sddm sddm-breeze bspwm sxhkd kitty rofi polybar picom thunar nitrogen lxpolkit
 
 # Installing Other less important Programs
-dnf install -y gimp lxappearance neofetch lnav wget curl zsh
+sudo dnf install -y gimp lxappearance neofetch lnav wget curl zsh
 
 # adding btop
 wget https://github.com/aristocratos/btop/releases/download/v1.2.8/btop-x86_64-linux-musl.tbz
 tar xjvf btop-x86_64-linux-musl.tbz 
-./install.sh
+sudo ./install.sh
 
 # Install starship
 curl -sS https://starship.rs/install.sh | sh
 
 # Installing Custom ocs-url package
-dnf install ./rpm-packages/ocs-url-3.1.0-1.fc20.x86_64.rpm
+sudo dnf install ./rpm-packages/ocs-url-3.1.0-1.fc20.x86_64.rpm
 
 # Installing fonts
-dnf install fontawesome-fonts fontawesome-fonts-web
+sudo dnf install fontawesome-fonts fontawesome-fonts-web
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
 unzip FiraCode.zip -d /usr/share/fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
 unzip Meslo.zip -d /usr/share/fonts
 # Reloading Font
-fc-cache -vf
+sudo fc-cache -vf
 # Removing zip Files
 rm ./FiraCode.zip ./Meslo.zip
 
@@ -47,22 +47,22 @@ rm ./FiraCode.zip ./Meslo.zip
 sudo dnf install -y papirus-icon-theme arandr firefox pavucontrol pipewire inkscape tumbler dnfdragora dnfdragora-gui
 
 # Install Brave 
-dnf install -y dnf-plugins-core
-dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
-rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
-dnf install -y brave-browser
+sudo dnf install -y dnf-plugins-core
+sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
+sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+sudo dnf install -y brave-browser
 
 # Install Chrome
-dnf install -y fedora-workstation-repositories
-dnf config-manager --set-enabled google-chrome
-dnf install -y google-chrome-stable
+sudo dnf install -y fedora-workstation-repositories
+sudo dnf config-manager --set-enabled google-chrome
+sudo dnf install -y google-chrome-stable
 
 # Enabling Services and Graphical User Interface
-systemctl enable sddm
-systemctl set-default graphical.target
+sudo systemctl enable sddm
+sudo systemctl set-default graphical.target
 
 # Install zsh
-sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+sudo sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
 # Install neovim 0.8
 wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
