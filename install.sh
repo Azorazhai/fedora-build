@@ -67,8 +67,8 @@ sudo ~/btop/install.sh
 wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
 tar xzvf nvim-linux64.tar.gz -C ~/
 
-# more programs
-sudo dnf install -y python3-pip python3-wheel xsel golang terraform brave-browser google-chrome-stable nodejs
+# Personalized programs
+sudo dnf install -y python3-pip python3-wheel xsel golang terraform brave-browser google-chrome-stable nodejs rclone
 sudo pip3 install pynim black ansible-lint
 
 
