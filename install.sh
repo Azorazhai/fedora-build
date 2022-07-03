@@ -45,16 +45,13 @@ rm ./FiraCode.zip ./Meslo.zip
 sudo dnf install -y papirus-icon-theme arandr firefox pavucontrol pipewire inkscape tumbler dnfdragora dnfdragora-gui
 sudo dnf install -y alsa-lib-devel ncurses-devel fftw3-devel pulseaudio-libs-devel libtool cava
 
-# Install Brave 
+# Repos 
 sudo dnf install -y dnf-plugins-core
 sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
 sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
-sudo dnf install -y brave-browser
-
-# Install Chrome
+sudo dnf config-manager --add-repo https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
 sudo dnf install -y fedora-workstation-repositories
 sudo dnf config-manager --set-enabled google-chrome
-sudo dnf install -y google-chrome-stable
 
 # Enabling Services and Graphical User Interface
 sudo systemctl enable sddm
@@ -62,17 +59,22 @@ sudo systemctl set-default graphical.target
 
 # adding btop
 wget https://github.com/aristocratos/btop/releases/download/v1.2.8/btop-x86_64-linux-musl.tbz
-mkdir btop
-tar xjvf btop-x86_64-linux-musl.tbz -C btop
-sudo btop/install.sh
+mkdir ~/btop
+tar xjvf btop-x86_64-linux-musl.tbz -C ~/btop
+sudo ~/btop/install.sh
 
 # Install neovim 0.8
 wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
 tar xzvf nvim-linux64.tar.gz -C ~/
 
 # more programs
-sudo dnf install -y python3-pip python3-wheel xsel
-sudo pip3 install pynim
+sudo dnf install -y python3-pip python3-wheel xsel golang terraform brave-browser google-chrome-stable nodejs
+sudo pip3 install pynim black ansible-lint
+
+
+sudo npm install -g nginxbeautifier
+curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.46.2
+go install golang.org/x/tools/cmd/goimports@latest
 
 # Install zsh
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
