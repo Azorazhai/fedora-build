@@ -43,7 +43,7 @@ rm ./FiraCode.zip ./Meslo.zip
 
 # More programs and dependencies 
 sudo dnf install -y papirus-icon-theme arandr firefox pavucontrol pipewire inkscape tumbler dnfdragora dnfdragora-gui
-sudo dnf install -y alsa-lib-devel ncurses-devel fftw3-devel pulseaudio-libs-devel libtool cava stacer
+sudo dnf install -y alsa-lib-devel ncurses-devel fftw3-devel pulseaudio-libs-devel libtool stacer openvpn
 
 # Repos 
 sudo dnf install -y dnf-plugins-core
