@@ -43,7 +43,7 @@ rm ./FiraCode.zip ./Meslo.zip
 
 # More programs and dependencies 
 sudo dnf install -y papirus-icon-theme arandr firefox pavucontrol pipewire inkscape tumbler dnfdragora dnfdragora-gui
-sudo dnf install -y alsa-lib-devel ncurses-devel fftw3-devel pulseaudio-libs-devel libtool cava
+sudo dnf install -y alsa-lib-devel ncurses-devel fftw3-devel pulseaudio-libs-devel libtool cava stacer
 
 # Repos 
 sudo dnf install -y dnf-plugins-core
@@ -63,7 +63,7 @@ mkdir ~/btop
 tar xjvf btop-x86_64-linux-musl.tbz -C ~/btop
 sudo ~/btop/install.sh
 
-# Install neovim 0.8
+# Install neovim nightly build
 wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
 tar xzvf nvim-linux64.tar.gz -C ~/
 
