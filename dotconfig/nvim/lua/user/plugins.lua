@@ -91,6 +91,14 @@ return packer.startup(function(use)
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
+  -- LSP Lines
+  use({
+    "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+    config = function()
+    require("lsp_lines").setup()
+    end,
+  })
+ 
   -- Git
   use "lewis6991/gitsigns.nvim"
 
