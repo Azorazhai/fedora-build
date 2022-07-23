@@ -36,6 +36,7 @@ local options = {
 }
 
 vim.opt.shortmess:append "c"
+vim.diagnostic.config({ virtual_lines = false })
 
 for k, v in pairs(options) do
   vim.opt[k] = v
