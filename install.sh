@@ -64,8 +64,9 @@ tar xjvf btop-x86_64-linux-musl.tbz -C ~/btop
 sudo ~/btop/install.sh
 
 # Install neovim nightly build
-wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
-tar xzvf nvim-linux64.tar.gz -C ~/
+sudo wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
+sudo tar xzvf nvim-linux64.tar.gz -C ~/
+sudo mv nvim-linux64/bin/nvim /usr/local/bin/
 
 # Personalized programs
 sudo dnf install -y python3-pip python3-wheel xsel golang terraform brave-browser google-chrome-stable nodejs rclone
@@ -79,5 +80,6 @@ go install golang.org/x/tools/cmd/goimports@latest
 # Install zsh
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
-echo 'alias nvim="~/nvim-linux64/bin/nvim"' >> ~/.zshrc
+# echo 'alias nvim="~/nvim-linux64/bin/nvim"' >> ~/.zshrc
 echo 'eval "$(starship init zsh)"' >> ~/.zshrc
+echo 'export PATH=$PATH:$HOME/.local/bin:$HOME/bin:$HOME/go/bin' >> ~/.zshrc
